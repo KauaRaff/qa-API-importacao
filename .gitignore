@@ -1,0 +1,26 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# ===== Ambientes virtuais =====
+venv/
+.env/
+.envrc
+
+# ===== Cache / build =====
+.build/
+dist/
+*.egg-info/
+
+# ===== IDEs / Editores =====
+.vscode/
+.idea/
+
+# ===== Sistema =====
+.DS_Store
+Thumbs.db
+
+# ===== Logs =====
+*.log
