@@ -1,0 +1,29 @@
+name: CI - Testes Automatizados
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  testes:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout do código
+        uses: actions/checkout@v4
+
+      - name: configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: instalar dependências
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Executar testes
+        run: |
+          pytest -v
